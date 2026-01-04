@@ -1,0 +1,56 @@
+/* Hide YouTube Shorts button and related UI elements */
+
+/* Desktop navigation - Shorts link in top navigation */
+a[href="/shorts"],
+a[href^="/shorts/"],
+ytd-guide-entry-renderer a[href="/shorts"],
+ytd-mini-guide-entry-renderer a[href="/shorts"] {
+  display: none !important;
+}
+
+/* Mini guide (collapsed sidebar) */
+ytd-mini-guide-entry-renderer[aria-label*="Shorts"],
+ytd-mini-guide-entry-renderer[aria-label*="shorts"] {
+  display: none !important;
+}
+
+/* Full guide (expanded sidebar) */
+ytd-guide-entry-renderer[aria-label*="Shorts"],
+ytd-guide-entry-renderer[aria-label*="shorts"] {
+  display: none !important;
+}
+
+/* Mobile navigation - Shorts button/tab */
+ytm-pivot-bar-item-renderer[aria-label*="Shorts"],
+ytm-pivot-bar-item-renderer[aria-label*="shorts"],
+a[href="/shorts"] ytm-pivot-bar-item-renderer {
+  display: none !important;
+}
+.pivot-shorts {
+    display: none !important;
+}
+
+shorts-page {
+    display: none !important;
+}
+/* Alternative selectors for different YouTube UI variations */
+#guide [href="/shorts"],
+#guide [href^="/shorts/"],
+ytd-guide-section-renderer a[href="/shorts"],
+ytd-guide-section-renderer a[href^="/shorts/"] {
+  display: none !important;
+}
+
+/* Hide Shorts in bottom navigation (mobile) */
+ytm-pivot-bar-renderer ytm-pivot-bar-item-renderer[aria-label*="Shorts"],
+ytm-pivot-bar-renderer ytm-pivot-bar-item-renderer[aria-label*="shorts"] {
+  display: none !important;
+}
+
+/* Additional selectors for edge cases */
+[aria-label*="Shorts"][role="tab"],
+[aria-label*="shorts"][role="tab"],
+button[aria-label*="Shorts"],
+button[aria-label*="shorts"] {
+  display: none !important;
+}
